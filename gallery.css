@@ -1,0 +1,52 @@
+/* gallery.css Lab 14 Gabriel Popa */
+body {
+	background-color: #838383;
+	color: #EAEAEA;
+}
+
+figure {
+	position: absolute;
+	left: 280px;
+	text-align: center;
+	opacity: .25;
+}
+
+#gallery { 
+	position: relative; 
+	}
+	
+#gallery ul {
+	list-style-type: none;
+    width: 300px; 
+	}
+	
+#gallery li { 
+	display: inline; 
+	float: left;
+	padding: 10px; 
+	}
+	
+#gallery img { 
+	border-style: none;
+	}
+	
+#gallery a { 
+	text-decoration: none;
+	font-style: italic;  
+	color: #EAEAEA; 
+	}
+	
+#gallery span { 
+	position: absolute;
+	left: -1000px;
+	opacity: 0;
+	transition: opacity 3s ease-in-out;
+	}
+
+#gallery a:hover span {   
+	position: absolute;
+	top: 10px;
+	left: 320px; 
+	text-align: center; 
+	opacity: 1;
+}

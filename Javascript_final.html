@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Final Project v3.0</title>	
+	<meta charset="utf-8">
+	<meta name="author" content="Gabriel Popa">
+	<link rel="stylesheet" href="css/project-css.css" type="text/css">
+	
+<!-- Final Project.
+
+	Changes in this version, version 3.0:
+	1. My own counter code for the textarea.
+	
+	Changes in v2.0: 
+	1. Added thank-you page after submitting 
+	2. Separated css and js code into own files in own folders
+	
+	
+	Below items done in v1.0:
+	- added character counter in message box
+	- added auto-formatting to the phone number field
+	- added 2 spans for the form's legend, to be able to more easily format the server response with css
+	(I know this is mostly just playing, but I wanted to do it)
+	- fixed Reset button behaviour to reset the form and refresh the page to reset counter
+	
+-->
+	
+</head>
+<body>
+<h1>Contact Us</h1>
+	
+<form id="contactForm" method="post">
+	<fieldset><legend><span id="legend" class="not_displayed">Final Project</span><span id="server_response" class="not_displayed"></span></legend>
+		<div>
+			<label for="name">Your Name:</label>
+			<input type="text" id="name" name="name" pattern="^[A-Za-z,\.\- ]{5,}$" placeholder="Your full name here" size="40" maxlength = "99" required autofocus>
+			<span id="name-error" class="name error hidden">Invalid name format</span>
+		</div>
+		<div>
+			<label for="email">Your E-Mail:</label>
+			<input type="email" id="email" name="email" pattern="^[^@]+@[^\.]+\..{2,}$" placeholder="your_email@emailProvider.com" size="40" maxlength="99" required>
+			<span id="email-error" class="address error hidden">Invalid e-mail address</span>
+		</div>
+		<div>
+			<label for="phone">Your phone number:</label>
+			<input type="tel" id="phone" name="phone" placeholder="Your 10-digit phone #" maxlength="12" required>
+			<span id="phone-error" class="phone error hidden">Please enter only the 10 digit number</span>
+		</div>
+		<div>
+			<label for="status" id="status_label">Your Status:</label>
+			<select name="status" id="status"> 
+				<option value="select">Click here to select</option>
+				<option value="client">Client</option>
+				<option value="partner">Partner</option>
+				<option value="vendor">Vendor</option>				
+			</select>
+			<span id="status-error" class="checkbox error hidden">Invalid status</span>
+		</div>
+		<div>
+			<label for="check" id="check_label">Send me your newsletter:</label>
+			<input id="check" type="checkbox" name="newsletter" value="on" checked>
+		</div>		
+		<div>
+			<label for="rb1" id="type_label">Contact type:</label>
+				<input type="radio" name="type" id="rb1" value="sales">Sales
+				<input type="radio" name="type" id="rb2" value="support">Support
+				<span id="type-error" class="radio error hidden">Please select a contact type</span>
+		</div>
+		<div>
+			<label for="message">Your message: <span class="min_char">(minimum 5 characters)</span></label>
+			<textarea id="message" name="message" rows="10" cols="60" maxlength="99" lengthcut="true" placeholder="Enter your message here"></textarea>
+			<span id="textCounter" class="counter hidden">Character counter</span>
+			<span id="message-error" class="message error hidden">Minimum 5 valid characters</span>
+		</div>
+		<div>
+			<button class="button" id="sendMsg" type="button">Submit</button>
+			<button class="button" type="button" value="Reset" id="resetBtn">Reset</button>
+		</div>		
+	</fieldset>
+</form>
+
+<footer>
+<h6>&copy; 2017 Gabriel Popa</h6>
+</footer>
+
+<script type="text/Javascript" src="scripts/v3js.js"></script>
+<script type="text/Javascript" src="scripts/counter.js"></script>
+<!--<script type="text/Javascript" src="scripts/charcount.js"></script>-->
+</body>
+</html>

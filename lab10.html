@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<!-- 	
+	Author: Gabriel Popa
+	Date: 	02--2017
+	Title: Lab10.html
+	Description: 
+-->
+	
+<html>
+	<head>
+		<title>Lab 10</title>
+		<style>
+		body { font-family: Verdana; width: 95%; }
+		form { padding: 10px; background-color:pink; border:1px solid #000; width: 600px; margin:auto; font-size: 1.2em; font-family: Verdana;}
+		label { text-align: right; float: left; width: 275px; padding-right: 10px; display: block; }
+		form p { text-align: center; }
+		#submit, #reset { width: 150px; height: 32px; font-size: 18px; background-color: #000; color: #fff; }
+		#submit:hover, #reset:hover { background-color: #fff; color: #000; }
+		h1, h2, h3, h4 { text-align: center; }
+		</style>
+	</head>
+	<body>
+	<hr>
+	<h1> Lab 10 </h1>
+	<hr>
+	<br>
+
+	<form action="lab10.php" method="post">
+		<p><label for="convert_from">Currency : </label>USD <input type="text" name="convert_from" value="" size="20" maxlength="20"></p>
+		<p>
+		<select name="convert_to">Convert to : 
+		<option value="euros">Euros</option>
+		<option value="bpounds">British Pounds</option>
+		<option value="cdollars">Canadian Dollars</option>
+		<option value="sfrancs">Swiss Francs</option>
+		</select>
+		</p>
+		<p><input type="submit" id="submit" name="submit" value="Do conversion"></p>
+		<p><input type="reset" id="reset" name="reset" value="Reset"></p>
+	</form>
+
+</body>
+</html>		
